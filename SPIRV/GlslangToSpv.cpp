@@ -883,7 +883,18 @@ TGlslangToSpvTraverser::TGlslangToSpvTraverser(const glslang::TIntermediate* gls
     builder.setSource(TranslateSourceLanguage(glslangIntermediate->getSource(), glslangIntermediate->getProfile()), glslangIntermediate->getVersion());
     if (options.generateDebugInfo) {
         builder.setSourceFile(glslangIntermediate->getSourceFile());
-        builder.setSourceText(glslangIntermediate->getSourceText());
+        std::string fullText;
+        const std::vector<std::string>& processes = glslangIntermediate->getProcesses();
+        for (int p = 0; p < (int)processes.size(); ++p) {
+            if (glslangIntermediate->getSpv().spv < 0x00010100) {
+                fullText.append("// OpModuleProcessed ");
+                fullText.append(processes[p]);
+                fullText.append("\n");
+            } else
+                builder.addModuleProcessed(processes[p]);
+        }
+        fullText.append(glslangIntermediate->getSourceText());
+        builder.setSourceText(fullText);
         builder.setEmitOpLines();
     }
     stdBuiltins = builder.import("GLSL.std.450");

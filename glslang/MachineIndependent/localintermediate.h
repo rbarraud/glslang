@@ -201,12 +201,25 @@ public:
 
     void setSource(EShSource s) { source = s; }
     EShSource getSource() const { return source; }
-    void setEntryPointName(const char* ep) { entryPointName = ep; }
+    void setEntryPointName(const char* ep)
+    {
+        entryPointName = ep;
+        processes.push_back("entry-point ");
+        processes.back().append(entryPointName);
+    }
     void setEntryPointMangledName(const char* ep) { entryPointMangledName = ep; }
     const std::string& getEntryPointName() const { return entryPointName; }
     const std::string& getEntryPointMangledName() const { return entryPointMangledName; }
 
-    void setShiftSamplerBinding(unsigned int shift) { shiftSamplerBinding = shift; }
+    void setShiftSamplerBinding(unsigned int shift)
+    {
+        shiftSamplerBinding = shift;
+        // TODO: localize this is a protected addNonzeroModuleProcessed(string, int) {}
+        if (shift != 0) {
+            processes.push_back("shift-sampler-binding ");
+            processes.back().append("TODO: shift amount");
+        }
+    }
     unsigned int getShiftSamplerBinding() const { return shiftSamplerBinding; }
     void setShiftTextureBinding(unsigned int shift) { shiftTextureBinding = shift; }
     unsigned int getShiftTextureBinding() const { return shiftTextureBinding; }
@@ -462,6 +475,11 @@ public:
     const std::string& getSourceFile() const { return sourceFile; }
     void addSourceText(const char* text) { sourceText = sourceText + text; }
     const std::string& getSourceText() const { return sourceText; }
+    void addProcesses(const std::vector<std::string>& p) {
+        for (int i = 0; i < (int)p.size(); ++i)
+            processes.push_back(p[i]);
+    }
+    const std::vector<std::string>& getProcesses() const { return processes; }
 
     const char* const implicitThisName = "@this";
 
@@ -557,6 +575,7 @@ protected:
     // source code of shader, useful as part of debug information
     std::string sourceFile;
     std::string sourceText;
+    std::vector<std::string> processes;
 
 private:
     void operator=(TIntermediate&); // prevent assignments

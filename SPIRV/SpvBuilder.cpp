@@ -2427,6 +2427,7 @@ void Builder::dump(std::vector<unsigned int>& out) const
 
     // Debug instructions
     dumpInstructions(out, strings);
+    // TODO: also dump moduleProcesses (doesn't matter unless SPIR-V version is 1.1 or above
     dumpSourceInstructions(out);
     for (int e = 0; e < (int)sourceExtensions.size(); ++e) {
         Instruction sourceExtInst(0, 0, OpSourceExtension);

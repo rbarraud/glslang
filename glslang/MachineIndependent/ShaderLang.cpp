@@ -1602,6 +1602,11 @@ void TShader::setSourceEntryPoint(const char* name)
     sourceEntryPointName = name;
 }
 
+void TShader::addProcesses(const std::vector<std::string>& p)
+{
+    intermediate->addProcesses(p);
+}
+
 // Set binding base for sampler types
 void TShader::setShiftSamplerBinding(unsigned int base) { intermediate->setShiftSamplerBinding(base); }
 // Set binding base for texture types (SRV)
@@ -1619,7 +1624,7 @@ void TShader::setShiftSsboBinding(unsigned int base)    { intermediate->setShift
 // Enables binding automapping using TIoMapper
 void TShader::setAutoMapBindings(bool map)              { intermediate->setAutoMapBindings(map); }
 // Fragile: currently within one stage: simple auto-assignment of location
-void TShader::setAutoMapLocations(bool map)              { intermediate->setAutoMapLocations(map); }
+void TShader::setAutoMapLocations(bool map)             { intermediate->setAutoMapLocations(map); }
 // See comment above TDefaultHlslIoMapper in iomapper.cpp:
 void TShader::setHlslIoMapping(bool hlslIoMap)          { intermediate->setHlslIoMapping(hlslIoMap); }
 void TShader::setFlattenUniformArrays(bool flatten)     { intermediate->setFlattenUniformArrays(flatten); }

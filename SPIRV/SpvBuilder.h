@@ -79,6 +79,7 @@ public:
     }
     void setSourceText(const std::string& text) { sourceText = text; }
     void addSourceExtension(const char* ext) { sourceExtensions.push_back(ext); }
+    void addModuleProcessed(const std::string& p) { moduleProcesses.push_back(p.c_str()); }
     void setEmitOpLines() { emitOpLines = true; }
     void addExtension(const char* ext) { extensions.insert(ext); }
     Id import(const char*);
@@ -591,6 +592,7 @@ public:
     bool emitOpLines;
     std::set<std::string> extensions;
     std::vector<const char*> sourceExtensions;
+    std::vector<const char*> moduleProcesses;
     AddressingModel addressModel;
     MemoryModel memoryModel;
     std::set<spv::Capability> capabilities;

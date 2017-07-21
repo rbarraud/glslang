@@ -152,6 +152,7 @@ int ClientInputSemanticsVersion = 100;   // maps to, say, #define VULKAN 100
 int VulkanClientVersion = 100;           // would map to, say, Vulkan 1.0
 int OpenGLClientVersion = 450;           // doesn't influence anything yet, but maps to OpenGL 4.50
 unsigned int TargetVersion = 0x00001000; // maps to, say, SPIR-V 1.0
+std::vector<std::string> Processes;      // what should be recorded by OpModuleProcessed, or equivalent
 
 std::array<unsigned int, EShLangCount> baseSamplerBinding;
 std::array<unsigned int, EShLangCount> baseTextureBinding;
@@ -175,6 +176,9 @@ public:
         text.append("#define ");
         fixLine(def);
 
+        Processes.push_back("D");
+        Processes.back().append(def);
+
         // The first "=" needs to turn into a space
         const size_t equal = def.find_first_of("=");
         if (equal != def.npos)
@@ -189,6 +193,10 @@ public:
     {
         text.append("#undef ");
         fixLine(undef);
+
+        Processes.push_back("U");
+        Processes.back().append(undef);
+
         text.append(undef);
         text.append("\n");
     }
@@ -739,6 +747,7 @@ void CompileAndLinkShaderUnits(std::vector<ShaderCompUnit> compUnits)
             shader->setSourceEntryPoint(sourceEntryPointName);
         if (UserPreamble.isSet())
             shader->setPreamble(UserPreamble.get());
+        shader->addProcesses(Processes);
 
         shader->setShiftSamplerBinding(baseSamplerBinding[compUnit.stage]);
         shader->setShiftTextureBinding(baseTextureBinding[compUnit.stage]);
