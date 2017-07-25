@@ -60,75 +60,60 @@ Shader version: 500
 0:?             'ins' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip' ( out float ClipDistance)
 0:12            clip: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                0 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip0' ( out float ClipDistance)
 0:12            clip0: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                1 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip7' ( out float ClipDistance)
 0:12            clip7: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                2 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull' ( out float CullDistance)
 0:12            cull: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                3 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull2' ( out float CullDistance)
 0:12            cull2: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                4 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull5' ( out float CullDistance)
 0:12            cull5: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                5 (const int)
 0:12        move second child to first child ( temp int)
-0:12          ii: direct index for structure ( temp int)
-0:12            '@entryPointOutput' (layout( location=0) out structure{ temp int ii})
-0:12            Constant:
-0:12              0 (const int)
+0:?           'ii' (layout( location=0) out int)
 0:12          ii: direct index for structure ( temp int)
 0:12            'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12            Constant:
 0:12              6 (const int)
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out structure{ temp int ii})
+0:?     'clip' ( out float ClipDistance)
+0:?     'clip0' ( out float ClipDistance)
+0:?     'clip7' ( out float ClipDistance)
+0:?     'cull' ( out float CullDistance)
+0:?     'cull2' ( out float CullDistance)
+0:?     'cull5' ( out float CullDistance)
+0:?     'ii' (layout( location=0) out int)
 0:?     'clip' (layout( location=0) in float)
 0:?     'clip0' (layout( location=1) in float)
 0:?     'clip7' (layout( location=2) in float)
@@ -202,75 +187,60 @@ Shader version: 500
 0:?             'ins' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip' ( out float ClipDistance)
 0:12            clip: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                0 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip0' ( out float ClipDistance)
 0:12            clip0: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                1 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_clip7' ( out 1-element array of float ClipDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'clip7' ( out float ClipDistance)
 0:12            clip7: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                2 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull' ( out float CullDistance)
 0:12            cull: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                3 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull2' ( out float CullDistance)
 0:12            cull2: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                4 (const int)
 0:?         Sequence
 0:12          move second child to first child ( temp float)
-0:12            direct index ( temp float)
-0:?               '@entryPointOutput_cull5' ( out 1-element array of float CullDistance)
-0:12              Constant:
-0:12                0 (const int)
+0:?             'cull5' ( out float CullDistance)
 0:12            cull5: direct index for structure ( temp float)
 0:12              'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12              Constant:
 0:12                5 (const int)
 0:12        move second child to first child ( temp int)
-0:12          ii: direct index for structure ( temp int)
-0:12            '@entryPointOutput' (layout( location=0) out structure{ temp int ii})
-0:12            Constant:
-0:12              0 (const int)
+0:?           'ii' (layout( location=0) out int)
 0:12          ii: direct index for structure ( temp int)
 0:12            'flattenTemp' ( temp structure{ temp float clip,  temp float clip0,  temp float clip7,  temp float cull,  temp float cull2,  temp float cull5,  temp int ii})
 0:12            Constant:
 0:12              6 (const int)
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out structure{ temp int ii})
+0:?     'clip' ( out float ClipDistance)
+0:?     'clip0' ( out float ClipDistance)
+0:?     'clip7' ( out float ClipDistance)
+0:?     'cull' ( out float CullDistance)
+0:?     'cull2' ( out float CullDistance)
+0:?     'cull5' ( out float CullDistance)
+0:?     'ii' (layout( location=0) out int)
 0:?     'clip' (layout( location=0) in float)
 0:?     'clip0' (layout( location=1) in float)
 0:?     'clip7' (layout( location=2) in float)
@@ -281,14 +251,14 @@ Shader version: 500
 
 // Module Version 10000
 // Generated by (magic number): 80001
-// Id's are bound by 87
+// Id's are bound by 78
 
                               Capability Shader
                               Capability ClipDistance
                               Capability CullDistance
                1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 21 26 30 34 38 42 47 59 70 82
+                              EntryPoint Vertex 4  "main" 21 26 30 34 38 42 47 56 59 62 65 68 71 75
                               Source HLSL 500
                               Name 4  "main"
                               Name 8  "S"
@@ -312,11 +282,13 @@ Shader version: 500
                               Name 47  "ii"
                               Name 51  "flattenTemp"
                               Name 52  "param"
-                              Name 59  "@entryPointOutput_clip7"
-                              Name 70  "@entryPointOutput_cull5"
-                              Name 80  "S"
-                              MemberName 80(S) 0  "ii"
-                              Name 82  "@entryPointOutput"
+                              Name 56  "clip"
+                              Name 59  "clip0"
+                              Name 62  "clip7"
+                              Name 65  "cull"
+                              Name 68  "cull2"
+                              Name 71  "cull5"
+                              Name 75  "ii"
                               Decorate 21(clip) Location 0
                               Decorate 26(clip0) Location 1
                               Decorate 30(clip7) Location 2
@@ -324,9 +296,13 @@ Shader version: 500
                               Decorate 38(cull2) Location 4
                               Decorate 42(cull5) Location 5
                               Decorate 47(ii) BuiltIn InstanceIndex
-                              Decorate 59(@entryPointOutput_clip7) BuiltIn ClipDistance
-                              Decorate 70(@entryPointOutput_cull5) BuiltIn CullDistance
-                              Decorate 82(@entryPointOutput) Location 0
+                              Decorate 56(clip) BuiltIn ClipDistance
+                              Decorate 59(clip0) BuiltIn ClipDistance
+                              Decorate 62(clip7) BuiltIn ClipDistance
+                              Decorate 65(cull) BuiltIn CullDistance
+                              Decorate 68(cull2) BuiltIn CullDistance
+                              Decorate 71(cull5) BuiltIn CullDistance
+                              Decorate 75(ii) Location 0
                2:             TypeVoid
                3:             TypeFunction 2
                6:             TypeFloat 32
@@ -352,17 +328,15 @@ Shader version: 500
               46:             TypePointer Input 7(int)
           47(ii):     46(ptr) Variable Input
               49:             TypePointer Function 7(int)
-              55:             TypeInt 32 0
-              56:     55(int) Constant 1
-              57:             TypeArray 6(float) 56
-              58:             TypePointer Output 57
-59(@entryPointOutput_clip7):     58(ptr) Variable Output
-              62:             TypePointer Output 6(float)
-70(@entryPointOutput_cull5):     58(ptr) Variable Output
-           80(S):             TypeStruct 7(int)
-              81:             TypePointer Output 80(S)
-82(@entryPointOutput):     81(ptr) Variable Output
-              85:             TypePointer Output 7(int)
+              55:             TypePointer Output 6(float)
+        56(clip):     55(ptr) Variable Output
+       59(clip0):     55(ptr) Variable Output
+       62(clip7):     55(ptr) Variable Output
+        65(cull):     55(ptr) Variable Output
+       68(cull2):     55(ptr) Variable Output
+       71(cull5):     55(ptr) Variable Output
+              74:             TypePointer Output 7(int)
+          75(ii):     74(ptr) Variable Output
          4(main):           2 Function None 3
                5:             Label
          18(ins):      9(ptr) Variable Function
@@ -393,34 +367,27 @@ Shader version: 500
                               Store 52(param) 53
               54:        8(S) FunctionCall 12(@main(struct-S-f1-f1-f1-f1-f1-f1-i11;) 52(param)
                               Store 51(flattenTemp) 54
-              60:     23(ptr) AccessChain 51(flattenTemp) 19
+              57:     23(ptr) AccessChain 51(flattenTemp) 19
+              58:    6(float) Load 57
+                              Store 56(clip) 58
+              60:     23(ptr) AccessChain 51(flattenTemp) 25
               61:    6(float) Load 60
-              63:     62(ptr) AccessChain 59(@entryPointOutput_clip7) 19
-                              Store 63 61
-              64:     23(ptr) AccessChain 51(flattenTemp) 25
-              65:    6(float) Load 64
-              66:     62(ptr) AccessChain 59(@entryPointOutput_clip7) 19
-                              Store 66 65
-              67:     23(ptr) AccessChain 51(flattenTemp) 29
-              68:    6(float) Load 67
-              69:     62(ptr) AccessChain 59(@entryPointOutput_clip7) 19
-                              Store 69 68
-              71:     23(ptr) AccessChain 51(flattenTemp) 33
-              72:    6(float) Load 71
-              73:     62(ptr) AccessChain 70(@entryPointOutput_cull5) 19
-                              Store 73 72
-              74:     23(ptr) AccessChain 51(flattenTemp) 37
-              75:    6(float) Load 74
-              76:     62(ptr) AccessChain 70(@entryPointOutput_cull5) 19
-                              Store 76 75
-              77:     23(ptr) AccessChain 51(flattenTemp) 41
-              78:    6(float) Load 77
-              79:     62(ptr) AccessChain 70(@entryPointOutput_cull5) 19
-                              Store 79 78
-              83:     49(ptr) AccessChain 51(flattenTemp) 45
-              84:      7(int) Load 83
-              86:     85(ptr) AccessChain 82(@entryPointOutput) 19
-                              Store 86 84
+                              Store 59(clip0) 61
+              63:     23(ptr) AccessChain 51(flattenTemp) 29
+              64:    6(float) Load 63
+                              Store 62(clip7) 64
+              66:     23(ptr) AccessChain 51(flattenTemp) 33
+              67:    6(float) Load 66
+                              Store 65(cull) 67
+              69:     23(ptr) AccessChain 51(flattenTemp) 37
+              70:    6(float) Load 69
+                              Store 68(cull2) 70
+              72:     23(ptr) AccessChain 51(flattenTemp) 41
+              73:    6(float) Load 72
+                              Store 71(cull5) 73
+              76:     49(ptr) AccessChain 51(flattenTemp) 45
+              77:      7(int) Load 76
+                              Store 75(ii) 77
                               Return
                               FunctionEnd
 12(@main(struct-S-f1-f1-f1-f1-f1-f1-i11;):        8(S) Function None 10

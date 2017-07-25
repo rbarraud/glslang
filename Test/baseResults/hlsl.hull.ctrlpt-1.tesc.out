@@ -22,15 +22,40 @@ triangle order = cw
 0:27  Function Definition: main( ( temp void)
 0:27    Function Parameters: 
 0:?     Sequence
-0:27      move second child to first child ( temp 3-element array of structure{ temp 3-component vector of float val})
-0:?         'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
-0:?         'i' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float val})
+0:27      Sequence
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                0 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[0].val' (layout( location=0) in 3-component vector of float)
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                1 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[1].val' (layout( location=1) in 3-component vector of float)
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                2 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[2].val' (layout( location=2) in 3-component vector of float)
 0:27      move second child to first child ( temp uint)
 0:?         'cpid' ( temp uint)
 0:?         'cpid' ( in uint InvocationID)
 0:27      move second child to first child ( temp structure{ temp 3-component vector of float val})
 0:27        indirect index ( temp structure{ temp 3-component vector of float val})
-0:?           '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float val})
+0:?           '@entryPointOutput' ( out 3-element array of structure{ temp 3-component vector of float val})
 0:?           'cpid' ( in uint InvocationID)
 0:27        Function Call: @main(struct-hs_in_t-vf31[3];u1; ( temp structure{ temp 3-component vector of float val})
 0:?           'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
@@ -77,10 +102,7 @@ triangle order = cw
 0:?               'pcf_out' ( temp 3-element array of structure{ temp 3-component vector of float val})
 0:?           Sequence
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   0 (const int)
+0:?               'tfactor[0]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -89,10 +111,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   0 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   1 (const int)
+0:?               'tfactor[1]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -101,10 +120,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   1 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   2 (const int)
+0:?               'tfactor[2]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -113,10 +129,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   2 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelInner)
-0:?                 '@patchConstantOutput_flInFactor' ( patch out 2-element array of float TessLevelInner)
-0:?                 Constant:
-0:?                   0 (const int)
+0:?               'flInFactor' ( patch out float TessLevelInner)
 0:?               flInFactor: direct index for structure ( temp float)
 0:?                 '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
 0:?                 Constant:
@@ -189,12 +202,20 @@ triangle order = cw
 0:42      Branch: Return with expression
 0:42        'o' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float val})
-0:?     'i' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float val})
+0:?     '@entryPointOutput[0].val' (layout( location=0) out 3-component vector of float)
+0:?     '@entryPointOutput[1].val' (layout( location=1) out 3-component vector of float)
+0:?     '@entryPointOutput[2].val' (layout( location=2) out 3-component vector of float)
+0:?     'i[0].val' (layout( location=0) in 3-component vector of float)
+0:?     'i[1].val' (layout( location=1) in 3-component vector of float)
+0:?     'i[2].val' (layout( location=2) in 3-component vector of float)
 0:?     'cpid' ( in uint InvocationID)
-0:?     '@patchConstantOutput' (layout( location=1) patch out structure{})
-0:?     '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?     '@patchConstantOutput_flInFactor' ( patch out 2-element array of float TessLevelInner)
+0:?     'tfactor[0]' ( patch out float TessLevelOuter)
+0:?     'tfactor[1]' ( patch out float TessLevelOuter)
+0:?     'tfactor[2]' ( patch out float TessLevelOuter)
+0:?     'tfactor[0]' ( patch out float TessLevelOuter)
+0:?     'tfactor[1]' ( patch out float TessLevelOuter)
+0:?     'tfactor[2]' ( patch out float TessLevelOuter)
+0:?     'flInFactor' ( patch out float TessLevelInner)
 
 
 Linked tessellation control stage:
@@ -223,15 +244,40 @@ triangle order = cw
 0:27  Function Definition: main( ( temp void)
 0:27    Function Parameters: 
 0:?     Sequence
-0:27      move second child to first child ( temp 3-element array of structure{ temp 3-component vector of float val})
-0:?         'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
-0:?         'i' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float val})
+0:27      Sequence
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                0 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[0].val' (layout( location=0) in 3-component vector of float)
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                1 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[1].val' (layout( location=1) in 3-component vector of float)
+0:27        move second child to first child ( temp 3-component vector of float)
+0:27          val: direct index for structure ( temp 3-component vector of float)
+0:27            direct index ( temp structure{ temp 3-component vector of float val})
+0:?               'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
+0:27              Constant:
+0:27                2 (const int)
+0:27            Constant:
+0:27              0 (const int)
+0:?           'i[2].val' (layout( location=2) in 3-component vector of float)
 0:27      move second child to first child ( temp uint)
 0:?         'cpid' ( temp uint)
 0:?         'cpid' ( in uint InvocationID)
 0:27      move second child to first child ( temp structure{ temp 3-component vector of float val})
 0:27        indirect index ( temp structure{ temp 3-component vector of float val})
-0:?           '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float val})
+0:?           '@entryPointOutput' ( out 3-element array of structure{ temp 3-component vector of float val})
 0:?           'cpid' ( in uint InvocationID)
 0:27        Function Call: @main(struct-hs_in_t-vf31[3];u1; ( temp structure{ temp 3-component vector of float val})
 0:?           'i' ( temp 3-element array of structure{ temp 3-component vector of float val})
@@ -278,10 +324,7 @@ triangle order = cw
 0:?               'pcf_out' ( temp 3-element array of structure{ temp 3-component vector of float val})
 0:?           Sequence
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   0 (const int)
+0:?               'tfactor[0]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -290,10 +333,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   0 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   1 (const int)
+0:?               'tfactor[1]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -302,10 +342,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   1 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelOuter)
-0:?                 '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?                 Constant:
-0:?                   2 (const int)
+0:?               'tfactor[2]' ( patch out float TessLevelOuter)
 0:?               direct index ( temp float)
 0:?                 tfactor: direct index for structure ( temp 3-element array of float)
 0:?                   '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
@@ -314,10 +351,7 @@ triangle order = cw
 0:?                 Constant:
 0:?                   2 (const int)
 0:?             move second child to first child ( temp float)
-0:?               direct index ( patch out float TessLevelInner)
-0:?                 '@patchConstantOutput_flInFactor' ( patch out 2-element array of float TessLevelInner)
-0:?                 Constant:
-0:?                   0 (const int)
+0:?               'flInFactor' ( patch out float TessLevelInner)
 0:?               flInFactor: direct index for structure ( temp float)
 0:?                 '@patchConstantResult' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
 0:?                 Constant:
@@ -390,21 +424,29 @@ triangle order = cw
 0:42      Branch: Return with expression
 0:42        'o' ( temp structure{ temp 3-element array of float tfactor,  temp float flInFactor})
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float val})
-0:?     'i' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float val})
+0:?     '@entryPointOutput[0].val' (layout( location=0) out 3-component vector of float)
+0:?     '@entryPointOutput[1].val' (layout( location=1) out 3-component vector of float)
+0:?     '@entryPointOutput[2].val' (layout( location=2) out 3-component vector of float)
+0:?     'i[0].val' (layout( location=0) in 3-component vector of float)
+0:?     'i[1].val' (layout( location=1) in 3-component vector of float)
+0:?     'i[2].val' (layout( location=2) in 3-component vector of float)
 0:?     'cpid' ( in uint InvocationID)
-0:?     '@patchConstantOutput' (layout( location=1) patch out structure{})
-0:?     '@patchConstantOutput_tfactor' ( patch out 4-element array of float TessLevelOuter)
-0:?     '@patchConstantOutput_flInFactor' ( patch out 2-element array of float TessLevelInner)
+0:?     'tfactor[0]' ( patch out float TessLevelOuter)
+0:?     'tfactor[1]' ( patch out float TessLevelOuter)
+0:?     'tfactor[2]' ( patch out float TessLevelOuter)
+0:?     'tfactor[0]' ( patch out float TessLevelOuter)
+0:?     'tfactor[1]' ( patch out float TessLevelOuter)
+0:?     'tfactor[2]' ( patch out float TessLevelOuter)
+0:?     'flInFactor' ( patch out float TessLevelInner)
 
 // Module Version 10000
 // Generated by (magic number): 80001
-// Id's are bound by 127
+// Id's are bound by 128
 
                               Capability Tessellation
                1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 41 45 48 94 108 126
+                              EntryPoint TessellationControl 4  "main" 41 45 49 54 57 99 103 106 109 125 126 127
                               ExecutionMode 4 OutputVertices 3
                               ExecutionMode 4 Triangles
                               ExecutionMode 4 SpacingFractionalOdd
@@ -425,37 +467,48 @@ triangle order = cw
                               Name 24  "pcf_out"
                               Name 28  "o"
                               Name 39  "i"
-                              Name 41  "i"
-                              Name 43  "cpid"
-                              Name 45  "cpid"
-                              Name 48  "@entryPointOutput"
-                              Name 50  "param"
-                              Name 52  "param"
-                              Name 66  "pcf_out"
-                              Name 67  "i"
-                              Name 68  "param"
-                              Name 70  "param"
-                              Name 74  "i"
-                              Name 75  "param"
+                              Name 41  "i[0].val"
+                              Name 45  "i[1].val"
+                              Name 49  "i[2].val"
+                              Name 52  "cpid"
+                              Name 54  "cpid"
+                              Name 57  "@entryPointOutput"
+                              Name 59  "param"
+                              Name 61  "param"
+                              Name 75  "pcf_out"
+                              Name 76  "i"
                               Name 77  "param"
-                              Name 81  "i"
-                              Name 82  "param"
-                              Name 84  "param"
-                              Name 88  "@patchConstantResult"
-                              Name 94  "@patchConstantOutput_tfactor"
-                              Name 108  "@patchConstantOutput_flInFactor"
+                              Name 79  "param"
+                              Name 82  "i"
+                              Name 83  "param"
+                              Name 85  "param"
+                              Name 88  "i"
+                              Name 89  "param"
+                              Name 91  "param"
+                              Name 95  "@patchConstantResult"
+                              Name 99  "tfactor[0]"
+                              Name 103  "tfactor[1]"
+                              Name 106  "tfactor[2]"
+                              Name 109  "flInFactor"
                               Name 112  "o"
-                              Name 124  "hs_pcf_t"
-                              Name 126  "@patchConstantOutput"
-                              Decorate 41(i) Location 0
-                              Decorate 45(cpid) BuiltIn InvocationId
-                              Decorate 48(@entryPointOutput) Location 0
-                              Decorate 94(@patchConstantOutput_tfactor) Patch
-                              Decorate 94(@patchConstantOutput_tfactor) BuiltIn TessLevelOuter
-                              Decorate 108(@patchConstantOutput_flInFactor) Patch
-                              Decorate 108(@patchConstantOutput_flInFactor) BuiltIn TessLevelInner
-                              Decorate 126(@patchConstantOutput) Patch
-                              Decorate 126(@patchConstantOutput) Location 1
+                              Name 125  "@entryPointOutput[0].val"
+                              Name 126  "@entryPointOutput[1].val"
+                              Name 127  "@entryPointOutput[2].val"
+                              Decorate 41(i[0].val) Location 0
+                              Decorate 45(i[1].val) Location 1
+                              Decorate 49(i[2].val) Location 2
+                              Decorate 54(cpid) BuiltIn InvocationId
+                              Decorate 99(tfactor[0]) Patch
+                              Decorate 99(tfactor[0]) BuiltIn TessLevelOuter
+                              Decorate 103(tfactor[1]) Patch
+                              Decorate 103(tfactor[1]) BuiltIn TessLevelOuter
+                              Decorate 106(tfactor[2]) Patch
+                              Decorate 106(tfactor[2]) BuiltIn TessLevelOuter
+                              Decorate 109(flInFactor) Patch
+                              Decorate 109(flInFactor) BuiltIn TessLevelInner
+                              Decorate 125(@entryPointOutput[0].val) Location 0
+                              Decorate 126(@entryPointOutput[1].val) Location 1
+                              Decorate 127(@entryPointOutput[2].val) Location 2
                2:             TypeVoid
                3:             TypeFunction 2
                6:             TypeFloat 32
@@ -476,108 +529,111 @@ triangle order = cw
               29:             TypeInt 32 1
               30:     29(int) Constant 0
               34:             TypePointer Function 7(fvec3)
-              40:             TypePointer Input 11
-           41(i):     40(ptr) Variable Input
-              44:             TypePointer Input 9(int)
-        45(cpid):     44(ptr) Variable Input
-              47:             TypePointer Output 20
-48(@entryPointOutput):     47(ptr) Variable Output
-              55:             TypePointer Output 14(hs_out_t)
-              57:      9(int) Constant 2
-              58:      9(int) Constant 1
-              59:      9(int) Constant 0
-              61:             TypeBool
-              65:             TypePointer Function 20
-              73:     29(int) Constant 1
-              80:     29(int) Constant 2
-              87:             TypePointer Function 22(hs_pcf_t)
-              91:      9(int) Constant 4
-              92:             TypeArray 6(float) 91
-              93:             TypePointer Output 92
-94(@patchConstantOutput_tfactor):     93(ptr) Variable Output
-              95:             TypePointer Function 6(float)
+              40:             TypePointer Input 7(fvec3)
+    41(i[0].val):     40(ptr) Variable Input
+              44:     29(int) Constant 1
+    45(i[1].val):     40(ptr) Variable Input
+              48:     29(int) Constant 2
+    49(i[2].val):     40(ptr) Variable Input
+              53:             TypePointer Input 9(int)
+        54(cpid):     53(ptr) Variable Input
+              56:             TypePointer Output 20
+57(@entryPointOutput):     56(ptr) Variable Output
+              64:             TypePointer Output 14(hs_out_t)
+              66:      9(int) Constant 2
+              67:      9(int) Constant 1
+              68:      9(int) Constant 0
+              70:             TypeBool
+              74:             TypePointer Function 20
+              94:             TypePointer Function 22(hs_pcf_t)
               98:             TypePointer Output 6(float)
-             106:             TypeArray 6(float) 57
-             107:             TypePointer Output 106
-108(@patchConstantOutput_flInFactor):    107(ptr) Variable Output
+  99(tfactor[0]):     98(ptr) Variable Output
+             100:             TypePointer Function 6(float)
+ 103(tfactor[1]):     98(ptr) Variable Output
+ 106(tfactor[2]):     98(ptr) Variable Output
+ 109(flInFactor):     98(ptr) Variable Output
              119:    6(float) Constant 1082130432
-   124(hs_pcf_t):             TypeStruct
-             125:             TypePointer Output 124(hs_pcf_t)
-126(@patchConstantOutput):    125(ptr) Variable Output
+             124:             TypePointer Output 7(fvec3)
+125(@entryPointOutput[0].val):    124(ptr) Variable Output
+126(@entryPointOutput[1].val):    124(ptr) Variable Output
+127(@entryPointOutput[2].val):    124(ptr) Variable Output
          4(main):           2 Function None 3
                5:             Label
            39(i):     12(ptr) Variable Function
-        43(cpid):     13(ptr) Variable Function
-       50(param):     12(ptr) Variable Function
-       52(param):     13(ptr) Variable Function
-     66(pcf_out):     65(ptr) Variable Function
-           67(i):     12(ptr) Variable Function
-       68(param):     12(ptr) Variable Function
-       70(param):     13(ptr) Variable Function
-           74(i):     12(ptr) Variable Function
-       75(param):     12(ptr) Variable Function
-       77(param):     13(ptr) Variable Function
-           81(i):     12(ptr) Variable Function
-       82(param):     12(ptr) Variable Function
-       84(param):     13(ptr) Variable Function
-88(@patchConstantResult):     87(ptr) Variable Function
-              42:          11 Load 41(i)
-                              Store 39(i) 42
-              46:      9(int) Load 45(cpid)
-                              Store 43(cpid) 46
-              49:      9(int) Load 45(cpid)
-              51:          11 Load 39(i)
-                              Store 50(param) 51
-              53:      9(int) Load 43(cpid)
-                              Store 52(param) 53
-              54:14(hs_out_t) FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 50(param) 52(param)
-              56:     55(ptr) AccessChain 48(@entryPointOutput) 49
-                              Store 56 54
-                              ControlBarrier 57 58 59
-              60:      9(int) Load 45(cpid)
-              62:    61(bool) IEqual 60 30
-                              SelectionMerge 64 None
-                              BranchConditional 62 63 64
-              63:               Label
-              69:          11   Load 67(i)
-                                Store 68(param) 69
-                                Store 70(param) 59
-              71:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 68(param) 70(param)
-              72:     27(ptr)   AccessChain 66(pcf_out) 30
-                                Store 72 71
-              76:          11   Load 74(i)
-                                Store 75(param) 76
-                                Store 77(param) 58
-              78:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 75(param) 77(param)
-              79:     27(ptr)   AccessChain 66(pcf_out) 73
-                                Store 79 78
-              83:          11   Load 81(i)
-                                Store 82(param) 83
-                                Store 84(param) 57
-              85:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 82(param) 84(param)
-              86:     27(ptr)   AccessChain 66(pcf_out) 80
-                                Store 86 85
-              89:          20   Load 66(pcf_out)
-              90:22(hs_pcf_t)   FunctionCall 25(PCF(struct-hs_out_t-vf31[3];) 89
-                                Store 88(@patchConstantResult) 90
-              96:     95(ptr)   AccessChain 88(@patchConstantResult) 30 30
-              97:    6(float)   Load 96
-              99:     98(ptr)   AccessChain 94(@patchConstantOutput_tfactor) 30
-                                Store 99 97
-             100:     95(ptr)   AccessChain 88(@patchConstantResult) 30 73
-             101:    6(float)   Load 100
-             102:     98(ptr)   AccessChain 94(@patchConstantOutput_tfactor) 73
-                                Store 102 101
-             103:     95(ptr)   AccessChain 88(@patchConstantResult) 30 80
-             104:    6(float)   Load 103
-             105:     98(ptr)   AccessChain 94(@patchConstantOutput_tfactor) 80
-                                Store 105 104
-             109:     95(ptr)   AccessChain 88(@patchConstantResult) 73
-             110:    6(float)   Load 109
-             111:     98(ptr)   AccessChain 108(@patchConstantOutput_flInFactor) 30
-                                Store 111 110
-                                Branch 64
-              64:             Label
+        52(cpid):     13(ptr) Variable Function
+       59(param):     12(ptr) Variable Function
+       61(param):     13(ptr) Variable Function
+     75(pcf_out):     74(ptr) Variable Function
+           76(i):     12(ptr) Variable Function
+       77(param):     12(ptr) Variable Function
+       79(param):     13(ptr) Variable Function
+           82(i):     12(ptr) Variable Function
+       83(param):     12(ptr) Variable Function
+       85(param):     13(ptr) Variable Function
+           88(i):     12(ptr) Variable Function
+       89(param):     12(ptr) Variable Function
+       91(param):     13(ptr) Variable Function
+95(@patchConstantResult):     94(ptr) Variable Function
+              42:    7(fvec3) Load 41(i[0].val)
+              43:     34(ptr) AccessChain 39(i) 30 30
+                              Store 43 42
+              46:    7(fvec3) Load 45(i[1].val)
+              47:     34(ptr) AccessChain 39(i) 44 30
+                              Store 47 46
+              50:    7(fvec3) Load 49(i[2].val)
+              51:     34(ptr) AccessChain 39(i) 48 30
+                              Store 51 50
+              55:      9(int) Load 54(cpid)
+                              Store 52(cpid) 55
+              58:      9(int) Load 54(cpid)
+              60:          11 Load 39(i)
+                              Store 59(param) 60
+              62:      9(int) Load 52(cpid)
+                              Store 61(param) 62
+              63:14(hs_out_t) FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 59(param) 61(param)
+              65:     64(ptr) AccessChain 57(@entryPointOutput) 58
+                              Store 65 63
+                              ControlBarrier 66 67 68
+              69:      9(int) Load 54(cpid)
+              71:    70(bool) IEqual 69 30
+                              SelectionMerge 73 None
+                              BranchConditional 71 72 73
+              72:               Label
+              78:          11   Load 76(i)
+                                Store 77(param) 78
+                                Store 79(param) 68
+              80:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 77(param) 79(param)
+              81:     27(ptr)   AccessChain 75(pcf_out) 30
+                                Store 81 80
+              84:          11   Load 82(i)
+                                Store 83(param) 84
+                                Store 85(param) 67
+              86:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 83(param) 85(param)
+              87:     27(ptr)   AccessChain 75(pcf_out) 44
+                                Store 87 86
+              90:          11   Load 88(i)
+                                Store 89(param) 90
+                                Store 91(param) 66
+              92:14(hs_out_t)   FunctionCall 18(@main(struct-hs_in_t-vf31[3];u1;) 89(param) 91(param)
+              93:     27(ptr)   AccessChain 75(pcf_out) 48
+                                Store 93 92
+              96:          20   Load 75(pcf_out)
+              97:22(hs_pcf_t)   FunctionCall 25(PCF(struct-hs_out_t-vf31[3];) 96
+                                Store 95(@patchConstantResult) 97
+             101:    100(ptr)   AccessChain 95(@patchConstantResult) 30 30
+             102:    6(float)   Load 101
+                                Store 99(tfactor[0]) 102
+             104:    100(ptr)   AccessChain 95(@patchConstantResult) 30 44
+             105:    6(float)   Load 104
+                                Store 103(tfactor[1]) 105
+             107:    100(ptr)   AccessChain 95(@patchConstantResult) 30 48
+             108:    6(float)   Load 107
+                                Store 106(tfactor[2]) 108
+             110:    100(ptr)   AccessChain 95(@patchConstantResult) 44
+             111:    6(float)   Load 110
+                                Store 109(flInFactor) 111
+                                Branch 73
+              73:             Label
                               Return
                               FunctionEnd
 18(@main(struct-hs_in_t-vf31[3];u1;):14(hs_out_t) Function None 15
@@ -596,17 +652,17 @@ triangle order = cw
 25(PCF(struct-hs_out_t-vf31[3];):22(hs_pcf_t) Function None 23
      24(pcf_out):          20 FunctionParameter
               26:             Label
-          112(o):     87(ptr) Variable Function
+          112(o):     94(ptr) Variable Function
              113:    6(float) CompositeExtract 24(pcf_out) 0 0 0
-             114:     95(ptr) AccessChain 112(o) 30 30
+             114:    100(ptr) AccessChain 112(o) 30 30
                               Store 114 113
              115:    6(float) CompositeExtract 24(pcf_out) 1 0 0
-             116:     95(ptr) AccessChain 112(o) 30 73
+             116:    100(ptr) AccessChain 112(o) 30 44
                               Store 116 115
              117:    6(float) CompositeExtract 24(pcf_out) 2 0 0
-             118:     95(ptr) AccessChain 112(o) 30 80
+             118:    100(ptr) AccessChain 112(o) 30 48
                               Store 118 117
-             120:     95(ptr) AccessChain 112(o) 73
+             120:    100(ptr) AccessChain 112(o) 44
                               Store 120 119
              121:22(hs_pcf_t) Load 112(o)
                               ReturnValue 121

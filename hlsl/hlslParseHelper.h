@@ -250,17 +250,6 @@ protected:
     int  addFlattenedMember(const TSourceLoc& loc, const TVariable&, const TType&, TFlattenData&, const TString& name, bool track);
     bool isFinalFlattening(const TType& type) const { return !(type.isStruct() || type.isArray()); }
 
-    // Structure splitting (splits interstage built-in types into its own struct)
-    TIntermTyped* splitAccessStruct(const TSourceLoc& loc, TIntermTyped*& base, int& member);
-    void splitAccessArray(const TSourceLoc& loc, TIntermTyped* base, TIntermTyped* index);
-    TType& split(TType& type, TString name, const TType* outerStructType = nullptr);
-    void split(TIntermTyped*);
-    void split(const TVariable&);
-    bool wasSplit(const TIntermTyped* node) const;
-    bool wasSplit(int id) const { return splitIoVars.find(id) != splitIoVars.end(); }
-    TVariable* getSplitIoVar(const TIntermTyped* node) const;
-    TVariable* getSplitIoVar(const TVariable* var) const;
-    TVariable* getSplitIoVar(int id) const;
     void addInterstageIoToLinkage();
     void addPatchConstantInvocation();
     TIntermTyped* makeIntegerIndex(TIntermTyped*);
@@ -410,12 +399,6 @@ protected:
 
     TMap<tInterstageIoData, TVariable*> interstageBuiltInIo; // individual builtin interstage IO vars, indexed by builtin type.
     TVariable* inputPatch;
-
-    // We have to move array references to structs containing builtin interstage IO to the split variables.
-    // This is only handled for one level.  This stores the index, because we'll need it in the future, since
-    // unlike normal array references, here the index happens before we discover what it applies to.
-    TIntermTyped* builtInIoIndex;
-    TIntermTyped* builtInIoBase;
 
     unsigned int nextInLocation;
     unsigned int nextOutLocation;

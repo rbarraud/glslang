@@ -25,12 +25,37 @@ triangle order = ccw
 0:26  Function Definition: main( ( temp void)
 0:26    Function Parameters: 
 0:?     Sequence
-0:26      move second child to first child ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?         'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?         'ip' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26      Sequence
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                0 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[0].cpoint' (layout( location=0) in 3-component vector of float)
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                1 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[1].cpoint' (layout( location=1) in 3-component vector of float)
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                2 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[2].cpoint' (layout( location=2) in 3-component vector of float)
 0:26      move second child to first child ( temp structure{ temp 3-component vector of float cpoint})
 0:26        indirect index ( temp structure{ temp 3-component vector of float cpoint})
-0:?           '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float cpoint})
+0:?           '@entryPointOutput' ( out 3-element array of structure{ temp 3-component vector of float cpoint})
 0:?           'InvocationId' ( in uint InvocationID)
 0:26        Function Call: @main(struct-VS_OUT-vf31[3]; ( temp structure{ temp 3-component vector of float cpoint})
 0:?           'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
@@ -47,8 +72,12 @@ triangle order = ccw
 0:33  Function Definition: PCF( ( temp void)
 0:33    Function Parameters: 
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?     'ip' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float cpoint})
+0:?     '@entryPointOutput[0].cpoint' (layout( location=0) out 3-component vector of float)
+0:?     '@entryPointOutput[1].cpoint' (layout( location=1) out 3-component vector of float)
+0:?     '@entryPointOutput[2].cpoint' (layout( location=2) out 3-component vector of float)
+0:?     'ip[0].cpoint' (layout( location=0) in 3-component vector of float)
+0:?     'ip[1].cpoint' (layout( location=1) in 3-component vector of float)
+0:?     'ip[2].cpoint' (layout( location=2) in 3-component vector of float)
 0:?     'InvocationId' ( in uint InvocationID)
 
 
@@ -81,12 +110,37 @@ triangle order = ccw
 0:26  Function Definition: main( ( temp void)
 0:26    Function Parameters: 
 0:?     Sequence
-0:26      move second child to first child ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?         'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?         'ip' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26      Sequence
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                0 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[0].cpoint' (layout( location=0) in 3-component vector of float)
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                1 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[1].cpoint' (layout( location=1) in 3-component vector of float)
+0:26        move second child to first child ( temp 3-component vector of float)
+0:26          cpoint: direct index for structure ( temp 3-component vector of float)
+0:26            direct index ( temp structure{ temp 3-component vector of float cpoint})
+0:?               'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
+0:26              Constant:
+0:26                2 (const int)
+0:26            Constant:
+0:26              0 (const int)
+0:?           'ip[2].cpoint' (layout( location=2) in 3-component vector of float)
 0:26      move second child to first child ( temp structure{ temp 3-component vector of float cpoint})
 0:26        indirect index ( temp structure{ temp 3-component vector of float cpoint})
-0:?           '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float cpoint})
+0:?           '@entryPointOutput' ( out 3-element array of structure{ temp 3-component vector of float cpoint})
 0:?           'InvocationId' ( in uint InvocationID)
 0:26        Function Call: @main(struct-VS_OUT-vf31[3]; ( temp structure{ temp 3-component vector of float cpoint})
 0:?           'ip' ( temp 3-element array of structure{ temp 3-component vector of float cpoint})
@@ -103,18 +157,22 @@ triangle order = ccw
 0:33  Function Definition: PCF( ( temp void)
 0:33    Function Parameters: 
 0:?   Linker Objects
-0:?     '@entryPointOutput' (layout( location=0) out 3-element array of structure{ temp 3-component vector of float cpoint})
-0:?     'ip' (layout( location=0) in 3-element array of structure{ temp 3-component vector of float cpoint})
+0:?     '@entryPointOutput[0].cpoint' (layout( location=0) out 3-component vector of float)
+0:?     '@entryPointOutput[1].cpoint' (layout( location=1) out 3-component vector of float)
+0:?     '@entryPointOutput[2].cpoint' (layout( location=2) out 3-component vector of float)
+0:?     'ip[0].cpoint' (layout( location=0) in 3-component vector of float)
+0:?     'ip[1].cpoint' (layout( location=1) in 3-component vector of float)
+0:?     'ip[2].cpoint' (layout( location=2) in 3-component vector of float)
 0:?     'InvocationId' ( in uint InvocationID)
 
 // Module Version 10000
 // Generated by (magic number): 80001
-// Id's are bound by 55
+// Id's are bound by 68
 
                               Capability Tessellation
                1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 33 37 39
+                              EntryPoint TessellationControl 4  "main" 33 37 41 46 48 65 66 67
                               ExecutionMode 4 OutputVertices 3
                               ExecutionMode 4 Triangles
                               ExecutionMode 4 SpacingFractionalEven
@@ -130,13 +188,22 @@ triangle order = ccw
                               Name 18  "PCF("
                               Name 21  "output"
                               Name 31  "ip"
-                              Name 33  "ip"
-                              Name 37  "@entryPointOutput"
-                              Name 39  "InvocationId"
-                              Name 41  "param"
-                              Decorate 33(ip) Location 0
-                              Decorate 37(@entryPointOutput) Location 0
-                              Decorate 39(InvocationId) BuiltIn InvocationId
+                              Name 33  "ip[0].cpoint"
+                              Name 37  "ip[1].cpoint"
+                              Name 41  "ip[2].cpoint"
+                              Name 46  "@entryPointOutput"
+                              Name 48  "InvocationId"
+                              Name 50  "param"
+                              Name 65  "@entryPointOutput[0].cpoint"
+                              Name 66  "@entryPointOutput[1].cpoint"
+                              Name 67  "@entryPointOutput[2].cpoint"
+                              Decorate 33(ip[0].cpoint) Location 0
+                              Decorate 37(ip[1].cpoint) Location 1
+                              Decorate 41(ip[2].cpoint) Location 2
+                              Decorate 48(InvocationId) BuiltIn InvocationId
+                              Decorate 65(@entryPointOutput[0].cpoint) Location 0
+                              Decorate 66(@entryPointOutput[1].cpoint) Location 1
+                              Decorate 67(@entryPointOutput[2].cpoint) Location 2
                2:             TypeVoid
                3:             TypeFunction 2
                6:             TypeFloat 32
@@ -152,39 +219,54 @@ triangle order = ccw
               22:             TypeInt 32 1
               23:     22(int) Constant 0
               24:             TypePointer Function 7(fvec3)
-              32:             TypePointer Input 11
-          33(ip):     32(ptr) Variable Input
-              35:             TypeArray 13(HS_OUT) 10
-              36:             TypePointer Output 35
-37(@entryPointOutput):     36(ptr) Variable Output
-              38:             TypePointer Input 9(int)
-39(InvocationId):     38(ptr) Variable Input
-              44:             TypePointer Output 13(HS_OUT)
-              46:      9(int) Constant 2
-              47:      9(int) Constant 1
-              48:      9(int) Constant 0
-              50:             TypeBool
+              32:             TypePointer Input 7(fvec3)
+33(ip[0].cpoint):     32(ptr) Variable Input
+              36:     22(int) Constant 1
+37(ip[1].cpoint):     32(ptr) Variable Input
+              40:     22(int) Constant 2
+41(ip[2].cpoint):     32(ptr) Variable Input
+              44:             TypeArray 13(HS_OUT) 10
+              45:             TypePointer Output 44
+46(@entryPointOutput):     45(ptr) Variable Output
+              47:             TypePointer Input 9(int)
+48(InvocationId):     47(ptr) Variable Input
+              53:             TypePointer Output 13(HS_OUT)
+              55:      9(int) Constant 2
+              56:      9(int) Constant 1
+              57:      9(int) Constant 0
+              59:             TypeBool
+              64:             TypePointer Output 7(fvec3)
+65(@entryPointOutput[0].cpoint):     64(ptr) Variable Output
+66(@entryPointOutput[1].cpoint):     64(ptr) Variable Output
+67(@entryPointOutput[2].cpoint):     64(ptr) Variable Output
          4(main):           2 Function None 3
                5:             Label
           31(ip):     12(ptr) Variable Function
-       41(param):     12(ptr) Variable Function
-              34:          11 Load 33(ip)
-                              Store 31(ip) 34
-              40:      9(int) Load 39(InvocationId)
-              42:          11 Load 31(ip)
-                              Store 41(param) 42
-              43:  13(HS_OUT) FunctionCall 16(@main(struct-VS_OUT-vf31[3];) 41(param)
-              45:     44(ptr) AccessChain 37(@entryPointOutput) 40
-                              Store 45 43
-                              ControlBarrier 46 47 48
-              49:      9(int) Load 39(InvocationId)
-              51:    50(bool) IEqual 49 23
-                              SelectionMerge 53 None
-                              BranchConditional 51 52 53
-              52:               Label
-              54:           2   FunctionCall 18(PCF()
-                                Branch 53
-              53:             Label
+       50(param):     12(ptr) Variable Function
+              34:    7(fvec3) Load 33(ip[0].cpoint)
+              35:     24(ptr) AccessChain 31(ip) 23 23
+                              Store 35 34
+              38:    7(fvec3) Load 37(ip[1].cpoint)
+              39:     24(ptr) AccessChain 31(ip) 36 23
+                              Store 39 38
+              42:    7(fvec3) Load 41(ip[2].cpoint)
+              43:     24(ptr) AccessChain 31(ip) 40 23
+                              Store 43 42
+              49:      9(int) Load 48(InvocationId)
+              51:          11 Load 31(ip)
+                              Store 50(param) 51
+              52:  13(HS_OUT) FunctionCall 16(@main(struct-VS_OUT-vf31[3];) 50(param)
+              54:     53(ptr) AccessChain 46(@entryPointOutput) 49
+                              Store 54 52
+                              ControlBarrier 55 56 57
+              58:      9(int) Load 48(InvocationId)
+              60:    59(bool) IEqual 58 23
+                              SelectionMerge 62 None
+                              BranchConditional 60 61 62
+              61:               Label
+              63:           2   FunctionCall 18(PCF()
+                                Branch 62
+              62:             Label
                               Return
                               FunctionEnd
 16(@main(struct-VS_OUT-vf31[3];):  13(HS_OUT) Function None 14
